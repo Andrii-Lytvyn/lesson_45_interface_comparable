@@ -5,24 +5,27 @@ import java.util.List;
 public class Main {
 
   public static void main(String[] args) {
-    Book book = new Book("Rand", "Atlas Shrugged2", 1140);
-    Book book2 = new Book("Rand", "Atlas Shrugged", 1123);
-    Book book3 = new Book("Dickens", "newBook", 1140);
-    System.out.println(book.toString());
-    System.out.println(book2.toString());
-    System.out.println(book3.toString());
     List<Book> bookList = new ArrayList<>();
-    bookList.add(book);
-    bookList.add(book2);
-    bookList.add(book3);
+    bookList.add(new Book(" 'Ayn Rand' ", " 'Abckedabra' ", 1140));
+    bookList.add(new Book(" 'Ayn Rand' ", " 'Atlas Shrugged' ", 1123));
+    bookList.add(new Book(" 'Rowling' ", " 'Harry Potter' ", 1140));
+    bookList.add( new Book(" 'Rowling' ", " 'Abckedabra' ", 1140));
+    for (Book books : bookList) {
+      System.out.println(books);
+    }
 
-    System.out.println();
+
+    System.out.println("Sort by author:");
     Collections.sort(bookList);
     for (Book books : bookList) {
         System.out.println(books);
     }
 
-
+    System.out.println("Sort by Comparator:");
+    bookList.sort(new BookNameComparator());
+    for (Book books : bookList) {
+      System.out.println(books);
+    }
   }
 
 }
