@@ -35,12 +35,10 @@ public class Book implements Comparable<Book> {
       return author.compareTo(otherBook.author);
     }
     return title.compareTo(otherBook.title);
-
   }
 
   @Override
   public String toString() {
-    String line = author + " " + title + " " + pages;
-    return line;
+    return author + " " + title + " " + pages;
   }
 }
