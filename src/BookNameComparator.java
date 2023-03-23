@@ -10,7 +10,12 @@ public class BookNameComparator implements Comparator<Book> {
     if (!o1.getTitle().equals(o2.getTitle())) {
       return o1.getTitle().compareTo(o2.getTitle());
     }
-    return o1.getAuthor().compareTo(o2.getTitle());
+    return o1.getAuthor().compareTo(o2.getAuthor());
   }
+
+
+
+
+
 
 }
