@@ -42,16 +42,16 @@ public class Main {
         System.out.println();
         System.out.println();
         System.out.println("======NEW SORT 14.04 LAMBDA");
-        bookList.sort((Book o1, Book o2) -> o1.getTitle().compareTo(o2.getTitle()));
+        bookList.sort((o1, o2) -> {
+            if (!o1.getTitle().equals(o2.getTitle())) {
+                return o1.getTitle().compareTo(o2.getTitle());
+            }
+            return o1.getAuthor().compareTo(o2.getAuthor());
+        });
+
         for (Book books : bookList) {
             System.out.println(books);
         }
-//        public int compare(Book o1, Book o2) {
-//            if (!o1.getTitle().equals(o2.getTitle())) {
-//                return o1.getTitle().compareTo(o2.getTitle());
-//            }
-//            return o1.getAuthor().compareTo(o2.getAuthor());
-
 
 
     }
