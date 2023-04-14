@@ -4,6 +4,11 @@ import java.util.List;
 
 public class Main {
 
+  /*
+ Используйте класс Book (книга) из домашнего задания к уроку 45 (см. Book.java).
+ Создайте список книг и отсортируйте книги по названию, (при одинаковых названиях - по автору) при помощи лямбда-функции.
+  */
+
   public static void main(String[] args) {
     List<Book> bookList = new ArrayList<>();
     bookList.add(new Book(" 'Ayn Rand' ", " 'Abckedabra' ", 1140));
